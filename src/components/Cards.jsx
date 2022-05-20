@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import style from '../styles/Cards.module.css'
+import '../styles/Cards.css';
 
 export default function Cards({cities}) {
   // acá va tu código
@@ -9,7 +9,7 @@ export default function Cards({cities}) {
   if (!cities) return <h1>No hay ciudades disponibles</h1>
 
   return (
-    <div className={style.conteiner}>
+    <div className='conteiner'>
       {
         cities && cities.map(city => (    // validacion para evitar que la pag rompa en caso de que city sea undefined(true && true === true)
 

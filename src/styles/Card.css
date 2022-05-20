@@ -4,9 +4,6 @@
     border-radius: 10px;
     margin: 5px;
     align-self: flex-end;
-}
-
-.btnColor{
     color: white;
 }
 
@@ -18,6 +15,7 @@
 .middleDiv{
     display: flex;
     flex-direction: row;
+    
 }
 
 .card{
@@ -28,4 +26,9 @@
     border: 2px solid grey;
     border-radius: 10px;
     height: 250px;
+}
+
+.temperature{
+    margin: 5px;
+
 }
