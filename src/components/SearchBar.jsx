@@ -1,16 +1,25 @@
-import React from 'react';
-import '../styles/SearchBar.css';
+import React,{useState} from 'react';
+import "../styles/SearchBar.css";
 
-export default function SearchBar(props) {
-  // acá va tu código
+export default function SearchBar({onSearch}) {
+
+  const [city, setCity] = useState();
+ 
   return (
-    <div className='conteiner'>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      onSearch(city);
+      }}>
 
-      <input type="text" placeholder='Ciudad...' />
-      <button onClick={()=>props.onSearch('Buscando Ciudad')} className='btn'>Agregar</button>
+      <input
+        type='text'
+        placeholder='Ciudad...'
+        value={city}
+        onChange={e => setCity(e.target.value)}
+        />
 
+        <input type='submit' value='Agregar'/>
 
-    </div>
-
-  )
+    </form>
+  );
 };
