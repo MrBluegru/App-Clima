@@ -10,7 +10,7 @@ function App() {
   //cities = []
     //setCities => f(queactualiza el estado) 0
   
-  const API_KEY = "0b7a8754f07cdfa66bd71db0163e7348";
+  const API_KEY = process.env;
   
   function onSearch(city){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},&appid=${API_KEY}&units=metric`)
