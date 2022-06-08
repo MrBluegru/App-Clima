@@ -10,16 +10,16 @@ function App() {
   //cities = []
     //setCities => f(queactualiza el estado) 0
   
-  const API_KEY = process.env;
+  const REACT_APP_API_KEY = '0b7a8754f07cdfa66bd71db0163e7348';
   
   function onSearch(city){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},&appid=${API_KEY}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},&appid=${REACT_APP_API_KEY}&units=metric`)
       .then(response => response.json())
       .then(response_json => {
         if(response_json.main !== undefined){
           const city = {
-            min: Math.round(response_json.main.temp_min),
-            max: Math.round(response_json.main.temp_max),
+            min: response_json.main.temp_min,
+            max: response_json.main.temp_max,
             img: response_json.weather[0].icon,
             id: response_json.id,
             wind: response_json.wind.speed,
