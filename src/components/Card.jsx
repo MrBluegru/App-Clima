@@ -10,19 +10,19 @@ export default function Card({ max, min, name, img, onClose }) {
 
             <div>{name}</div>
 
-            <div className= 'middleDiv'> 
+            <div className='middleDiv'> 
                 <div className='temperature'>
                   <div>Min</div>
                   <div>{min}</div>
                 </div>
+            <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt= 'img'/>
               <div className='temperature'>
                   <div>Max</div>
                   <div>{max}</div>
               </div>
-            </div>
+            </div >
 
-            <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt= 'img'/>
-
+            
           </div>
   )
 };

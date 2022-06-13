@@ -2,15 +2,19 @@
     padding-right: 5px;
     display: flex;
     justify-content: center;
+    align-content: center;
+    align-items: center;
     margin-top: 10px;
 }
 
-.btn{
+.btns{
     color: grey;
     background-color: black;
+    
+
 }
 
-.btn:hover{
+.btns:hover{
     background-color: grey;
     color: #282c34;
 }
